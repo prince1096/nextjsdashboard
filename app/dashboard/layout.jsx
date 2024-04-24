@@ -11,8 +11,8 @@ const DashLayout = ({ children }) => {
       </div>
       <div className={styles.content}>
         <Navbar />
+        {children}
       </div>
-      {children}
     </div>
   );
 };
