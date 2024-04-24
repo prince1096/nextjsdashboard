@@ -8,3 +8,8 @@
   padding: 20px;
   min-height: 100vh;
 }
+
+.content {
+  flex: 4;
+  padding: 20px;
+}
