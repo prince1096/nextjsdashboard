@@ -1,11 +1,12 @@
 "use client";
 
+import addUser from "@/app/lib/action";
 // import addUser from "@/app/lib/actions";
 // import styles from "@/app/ui/dashboard/users/add/addUser.module.css";
 import styles from "../../../components/ui/dashboard/users/add/addUser.module.css";
 
 const AddUserPage = () => {
-  const addUser = () => {};
+  // const addUser = () => {};
 
   return (
     <div className={styles.container}>

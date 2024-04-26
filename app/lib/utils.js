@@ -1,3 +1,5 @@
+import mongoose from "mongoose";
+
 export const connectToDB = async () => {
   const connection = {};
 
@@ -7,5 +9,6 @@ export const connectToDB = async () => {
     connection.isConnected = db.connection[0].readyState;
   } catch (error) {
     throw new Error(error);
+    // console.log(error);
   }
 };
