@@ -1,5 +1,6 @@
 "use server";
 
+import { redirect } from "next/navigation";
 import { Users } from "./models";
 import { connectToDB } from "./utils";
 import bcrypt from "bcrypt";
@@ -22,6 +23,7 @@ const addUser = async (formData) => {
       username,
       email,
       password: hashedPassword,
+      //   password,
       phone,
       address,
       isAdmin,
@@ -29,9 +31,13 @@ const addUser = async (formData) => {
     });
 
     const savedUser = await newUser.save();
+    console.log(savedUser, "savedUser");
   } catch (error) {
     console.log(error);
+    // throw new Error("Failed to create User");
   }
+
+  redirect("/dashboard/users");
 };
 
 export default addUser;
